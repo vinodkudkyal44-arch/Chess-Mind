@@ -1,0 +1,205 @@
+
+.visual-lesson {
+  margin: 35px 0;
+  padding: 28px;
+  background: linear-gradient(145deg, #24231e, #191a17);
+  border: 1px solid #c9a66e45;
+  border-radius: 12px;
+}
+
+.visual-lesson-heading {
+  margin-bottom: 25px;
+}
+
+.visual-lesson-heading > span {
+  color: #c9a66e;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.visual-lesson-heading h2 {
+  margin: 10px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(23px, 4vw, 32px);
+  font-weight: 500;
+}
+
+.visual-lesson-heading p {
+  color: #999286;
+  font-size: 13px;
+}
+
+.visual-demo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.visual-board-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 8px;
+  background: #0d0e0c;
+  border: 1px solid #ffffff20;
+  border-radius: 5px;
+}
+
+.visual-chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.visual-square {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+.light-square {
+  background: #e6d8bd;
+}
+
+.dark-square {
+  background: #927653;
+}
+
+.highlight-square {
+  box-shadow: inset 0 0 0 4px #e7bd55;
+  background-color: #c9a66e !important;
+}
+
+.visual-piece {
+  z-index: 1;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: clamp(20px, 5vw, 48px);
+  line-height: 1;
+  user-select: none;
+}
+
+.white-piece {
+  color: #fffdf5;
+  text-shadow: 1px 2px 2px #282018, -1px -1px 1px #282018;
+}
+
+.black-piece {
+  color: #24211d;
+  text-shadow: 1px 1px 1px #fff4d8;
+}
+
+.rank-coordinate,
+.file-coordinate {
+  position: absolute;
+  z-index: 2;
+  font-size: clamp(7px, 1vw, 10px);
+  font-weight: 700;
+  color: #443729;
+}
+
+.rank-coordinate {
+  top: 2px;
+  left: 3px;
+}
+
+.file-coordinate {
+  bottom: 1px;
+  right: 3px;
+}
+
+.visual-step-panel {
+  padding: 10px 0;
+}
+
+.visual-step-count {
+  color: #c9a66e;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.visual-step-progress {
+  height: 5px;
+  margin: 13px 0 25px;
+  background: #ffffff18;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.visual-step-progress div {
+  height: 100%;
+  background: #c9a66e;
+  transition: width .3s ease;
+}
+
+.visual-step-panel h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 13px;
+}
+
+.visual-step-panel > p {
+  color: #b0a99d;
+  font-size: 13px;
+  line-height: 1.9;
+  min-height: 100px;
+}
+
+.visual-step-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.visual-step-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 12px;
+  background: #303029;
+  color: #eee8dc;
+  border: 1px solid #ffffff20;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.visual-step-controls button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.visual-step-controls .visual-next {
+  background: #c9a66e;
+  border-color: #c9a66e;
+  color: #17140f;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .visual-lesson {
+    padding: 17px;
+  }
+
+  .visual-demo-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .visual-board-wrap {
+    max-width: 440px;
+  }
+
+  .visual-step-panel > p {
+    min-height: auto;
+  }
+}
